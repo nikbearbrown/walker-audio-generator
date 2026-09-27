@@ -1,0 +1,15 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+TextServer: Added interface "Dummy"
+TextServer: Added interface "ICU / HarfBuzz / Graphite (Built-in)"
+SDL: Init OK!
+Using "default" pen tablet driver...
+
+TextServer: Primary interface set to: "ICU / HarfBuzz / Graphite (Built-in)".
+CORE API HASH: 2004498165
+EDITOR API HASH: 1696660745
+SceneTreeFTI: traversal method DEFAULT
+Loaded system CA certificates
+Loading resource: res://generator.tscn remapped: res://generator.tscn
+Loading resource: res://generator_demo.gd remapped: res://generator_demo.gd
+Completed load for: 'res://generator_demo.gd' remapped 'res://generator_demo.gd' at thread -1
+Completed load for: 'res://generator.tscn' remapped 'res://generator.tscn' at thread -1

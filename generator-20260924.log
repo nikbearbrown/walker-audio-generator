@@ -1,0 +1,18 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PASS generator playback initialized
+PASS initial sample and tone rates
+PASS phase wrapped after initial fill
+PASS frequency keyboard state 1000
+PASS phase remains wrapped 1000
+PASS frequency keyboard state 100
+PASS phase remains wrapped 100
+PASS frequency keyboard state 101
+PASS phase remains wrapped 101
+PASS volume keyboard conversion 1.0
+PASS volume label 1.0
+PASS volume keyboard conversion 0.001
+PASS volume label 0.001
+PASS volume keyboard conversion 0.002
+PASS volume label 0.002
+HEADLESS/DUMMY STATE ONLY: no heard pitch, waveform capture, latency or film verification; failures=0

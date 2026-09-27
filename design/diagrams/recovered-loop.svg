@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="660" viewBox="0 0 1400 660" role="img" aria-labelledby="t d">
+<title id="t">Recovered interaction loop — Audio Generator</title>
+<desc id="d">The tone starts on its own; the sliders steer it; GDScript refills the buffer every frame. References: M-01 M-02 M-03 M-04 S-01 F-04.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e6e6e6"/></marker><marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0a040"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e06c5f"/></marker></defs>
+<rect width="1400" height="660" fill="#202225"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<text x="36" y="50" font-size="28" font-weight="700" fill="#e6e6e6">Recovered interaction loop — Audio Generator</text>
+<text x="36" y="78" font-size="15" fill="#9aa3ad">The tone starts on its own; the sliders steer it; GDScript refills the buffer every frame.</text>
+<rect x="36" y="620" width="30" height="18" rx="4" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="76" y="634" font-size="14" fill="#9aa3ad">observed in code / logs (solid)</text>
+<rect x="366" y="620" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e0a040" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="406" y="634" font-size="14" fill="#9aa3ad">inferred or proposed (dashed)</text>
+<rect x="696" y="620" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="736" y="634" font-size="14" fill="#9aa3ad">missing / unverified (dotted)</text>
+<text x="1364" y="634" font-size="14" fill="#9aa3ad" text-anchor="end">IDs: M-01 M-02 M-03 M-04 S-01 F-04</text>
+<path d="M280,170 L380,170" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<path d="M640,170 L740,170" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<path d="M980,170 L1080,170" fill="none" stroke="#e06c5f" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#am)"/>
+<path d="M468,130 L440,104 L580,104 L552,130" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="675" y="116" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">every frame</text>
+<path d="M510,330 L510,210" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="550" y="270" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">pulse_hz</text>
+<path d="M860,330 L860,210" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="905" y="270" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">volume_db</text>
+<path d="M1210,210 L1210,330" fill="none" stroke="#e06c5f" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#am)"/>
+<path d="M1210,420 L1210,580 L510,580 L510,410" fill="none" stroke="#e0a040" stroke-width="2" stroke-dasharray="7 5" marker-end="url(#ad)"/>
+<text x="510" y="572" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">move a slider</text>
+<rect x="40" y="130" width="240" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="160" y="168" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Launch: play()</text>
+<text x="160" y="186" font-size="13" fill="#9aa3ad" text-anchor="middle">M-02 · mix_rate 22050</text>
+<rect x="380" y="130" width="260" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="510" y="168" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">_process: fill buffer</text>
+<text x="510" y="186" font-size="13" fill="#9aa3ad" text-anchor="middle">M-01 · push_frame(sin)</text>
+<rect x="740" y="130" width="240" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="860" y="168" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">AudioServer mix</text>
+<text x="860" y="186" font-size="13" fill="#9aa3ad" text-anchor="middle">S-01</text>
+<rect x="1080" y="130" width="260" height="80" rx="8" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="1210" y="168" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Tone at the output</text>
+<text x="1210" y="186" font-size="13" fill="#9aa3ad" text-anchor="middle">F-04 · never heard</text>
+<rect x="380" y="330" width="260" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="510" y="368" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Frequency slider</text>
+<text x="510" y="386" font-size="13" fill="#9aa3ad" text-anchor="middle">M-03 · 100–1000 Hz</text>
+<rect x="740" y="330" width="240" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="860" y="368" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Volume slider</text>
+<text x="860" y="386" font-size="13" fill="#9aa3ad" text-anchor="middle">M-04 · linear → dB</text>
+<rect x="1080" y="330" width="260" height="90" rx="8" fill="#2b2e33" stroke="#e0a040" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="1210" y="363" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Listener adjusts</text>
+<text x="1210" y="382" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">by ear</text>
+<text x="1210" y="401" font-size="13" fill="#9aa3ad" text-anchor="middle">PX candidate · [INFERRED]</text>
+<rect x="40" y="460" width="300" height="80" rx="8" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="190" y="498" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Stop / quit</text>
+<text x="190" y="516" font-size="13" fill="#9aa3ad" text-anchor="middle">no control; abrupt exit leaks · Q-05</text>
+</g></svg>

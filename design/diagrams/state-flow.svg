@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="560" viewBox="0 0 1400 560" role="img" aria-labelledby="t d">
+<title id="t">Recovered state flow — Audio Generator</title>
+<desc id="d">One running state, set at launch. The observed teardown paths come from FRICTIONAL.md, not from the demo. References: M-02 S-01 S-02 F-05.</desc>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e6e6e6"/></marker><marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e0a040"/></marker><marker id="am" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#e06c5f"/></marker></defs>
+<rect width="1400" height="560" fill="#202225"/>
+<g font-family="Helvetica, Arial, sans-serif">
+<text x="36" y="50" font-size="28" font-weight="700" fill="#e6e6e6">Recovered state flow — Audio Generator</text>
+<text x="36" y="78" font-size="15" fill="#9aa3ad">One running state, set at launch. The observed teardown paths come from FRICTIONAL.md, not from the demo.</text>
+<rect x="36" y="520" width="30" height="18" rx="4" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="76" y="534" font-size="14" fill="#9aa3ad">observed in code / logs (solid)</text>
+<rect x="366" y="520" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e0a040" stroke-width="2.5" stroke-dasharray="7 5"/>
+<text x="406" y="534" font-size="14" fill="#9aa3ad">inferred or proposed (dashed)</text>
+<rect x="696" y="520" width="30" height="18" rx="4" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="736" y="534" font-size="14" fill="#9aa3ad">missing / unverified (dotted)</text>
+<text x="1364" y="534" font-size="14" fill="#9aa3ad" text-anchor="end">IDs: M-02 S-01 S-02 F-05</text>
+<path d="M260,260 L360,260" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="310" y="252" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">_ready: play()</text>
+<path d="M450,220 L420,180 L540,180 L510,220" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="540" y="174" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">slider value_changed</text>
+<path d="M600,228 L760,185" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="680" y="196" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">--quit-after</text>
+<path d="M600,292 L760,335" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<text x="680" y="338" font-size="13" fill="#9aa3ad" text-anchor="middle" paint-order="stroke" stroke="#202225" stroke-width="4">test_restart.gd</text>
+<path d="M1020,370 L1120,370" fill="none" stroke="#e6e6e6" stroke-width="2" marker-end="url(#a)"/>
+<path d="M480,300 L480,420" fill="none" stroke="#e06c5f" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#am)"/>
+<rect x="40" y="220" width="220" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="150" y="266" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Scene loaded</text>
+<rect x="360" y="220" width="240" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="480" y="258" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Generating</text>
+<text x="480" y="276" font-size="13" fill="#9aa3ad" text-anchor="middle">pulse_hz, volume live</text>
+<rect x="760" y="110" width="260" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="890" y="148" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Abrupt quit</text>
+<text x="890" y="166" font-size="13" fill="#9aa3ad" text-anchor="middle">1 ObjectDB leak</text>
+<rect x="760" y="330" width="260" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="890" y="368" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Orderly teardown</text>
+<text x="890" y="386" font-size="13" fill="#9aa3ad" text-anchor="middle">stop → release → 0.2 s → free</text>
+<rect x="1120" y="330" width="220" height="80" rx="8" fill="#2b2e33" stroke="#478cbf" stroke-width="2.5"/>
+<text x="1230" y="368" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Clean exit</text>
+<text x="1230" y="386" font-size="13" fill="#9aa3ad" text-anchor="middle">test harness only</text>
+<rect x="360" y="420" width="240" height="80" rx="8" fill="#2b2e33" stroke="#e06c5f" stroke-width="2.5" stroke-dasharray="3 4"/>
+<text x="480" y="458" font-size="16" font-weight="700" fill="#e6e6e6" text-anchor="middle">Paused / muted</text>
+<text x="480" y="476" font-size="13" fill="#9aa3ad" text-anchor="middle">no such state · Q-04</text>
+</g></svg>
